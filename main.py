@@ -20,7 +20,8 @@ def connection(a, b, point):
     pygame.draw.line(window, (255,255,255),
      (int(point[a][0]), int(point[a][1])), 
      (int(point[b][0]), int(point[b][1])), 1)
-
+    
+# if using torus r < R
 R = 3
 r = 5
 num_theta = 30
@@ -108,6 +109,7 @@ while True:
     
     for edge in edges:  
         connection(edge[0] , edge[1], points)   
+        
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
